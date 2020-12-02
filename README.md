@@ -2,4 +2,4 @@
 Group Project for Group 9 Crypto Knights
 
 Stock Lists:
-AMD, AAPL, GOOGL, TSLA, NIO
+AMD, AAPL, GOOGL, TSLA, GME
