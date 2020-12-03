@@ -1,5 +1,12 @@
 # Crypto_Knights
 Group Project for Group 9 Crypto Knights
 
-Stock Lists:
-AMD, AAPL, GOOGL, TSLA, GME
+Example Stock Lists: [AMD, AAPL, GOOGL, TSLA, GME]
+
+
+# Python Library Dependencies
+BeautifulSoup
+requests
+pandas 
+datetime
+key from scrapingdog (https://www.scrapingdog.com/)
