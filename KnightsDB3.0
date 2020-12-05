@@ -1,7 +1,13 @@
 SELECT * FROM "Stock_History";
-DROP TABLE "Crypto";
 SELECT * FROM "Web_Scraping_Data_Table";
 SELECT * FROM "Crypto";
+
+UPDATE "Crypto"
+SET "Date_Symbol" = TO_CHAR("Date", 'YYYY:MM:DD') || ' ' || "Symbol";
+UPDATE "Stock_History"
+SET Date_Symbol = TO_CHAR("Date", 'YYYY:MM:DD') || ' ' || "Symbol";
+UPDATE "Web_Scraping_Data_Table"
+SET Date_Symbol = TO_CHAR("Date", 'YYYY:MM:DD') || ' ' || "Symbol";
 
 CREATE TABLE "Crypto" (
     "Date" date   NOT NULL,
@@ -30,3 +36,21 @@ CREATE TABLE "Web_Scraping_Data_Table" (
     "Symbol" VARCHAR(30)   NOT NULL,
     "Closing_Price" FLOAT   NOT NULL
 );
+
+ALTER TABLE "Crypto" ADD "Date_Symbol" VARCHAR(30);
+
+ALTER TABLE "Stock_History" ADD Date_Symbol VARCHAR(30);
+
+ALTER TABLE "Web_Scraping_Data_Table" ADD Date_Symbol VARCHAR(30);
+
+ALTER TABLE "Crypto" 
+ADD PRIMARY KEY (
+        "Date_Symbol");
+		
+ALTER TABLE "Stock_History" 
+ADD PRIMARY KEY (
+        Date_Symbol);
+		
+ALTER TABLE "Web_Scraping_Data_Table" 
+ADD PRIMARY KEY (
+        Date_Symbol);
