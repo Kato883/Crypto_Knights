@@ -15,7 +15,7 @@ Example Coin Lists: [BTC, ETH, LTC-USD, XRP-USD, DASH-USD]
 
 
 ## Load
-* Historical stock data: The data is loaded into Postgresql with sqlalchemy.
+* Before loading our data, we used an ERD to create and format the tables we wanted to utilize with the information we were extracting. We then determined that Postgres database management system would be the best way to load our data into a DB. After retrieving the API calls, web scraping and importing data into CSV's, it was imperitive that we had uniform columns that correlate with the database that had been created. Using Python, we transfered all of the data necessary into the Postgres DB.  We are now able to train model with the Crypto and Stock History table then test the model using the Web Scraping Table.
 
 
 # Python Library Dependencies
