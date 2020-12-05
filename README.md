@@ -2,6 +2,7 @@
 Group Project for Group 9 Crypto Knights
 
 Example Stock Lists: [AMD, AAPL, GOOGL, TSLA, GME]
+Example Coin Lists: [BTC, ETH, LTC-USD, XRP-USD, DASH-USD]
 
 ## Extract
 * Historical stock data: The 'stocks_API_data_collection' script uses the Quandl API to query historical market data by exchange symbol. Each ticker needs a separate API call, so the script loads each JSON into a pandas dataframe and saves it as the value of a dictionary. Try-excepts are used to handle missing data.
