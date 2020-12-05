@@ -1,0 +1,31 @@
+SELECT * FROM "Stock_History";
+
+CREATE TABLE "Crypto" (
+    "Date" date   NOT NULL,
+    "Symbol" VARCHAR(30)   NOT NULL,
+    "Open" FLOAT   NOT NULL,
+    "High" FLOAT   NOT NULL,
+    "Low" FLOAT   NOT NULL,
+    "Close" FLOAT   NOT NULL,
+    "Close_Increase" FLOAT   NOT NULL,
+    "Volume" INT   NOT NULL,
+    "Volume_Increase" FLOAT   NOT NULL,
+    "Market_Cap" INT   NOT NULL,
+    "Market_Cap_Increase" FLOAT   NOT NULL
+);
+
+CREATE TABLE "Stock_History" (
+    "Date" date   NOT NULL,
+    "Symbol" VARCHAR(30)   NOT NULL,
+    "Open" FLOAT   NOT NULL,
+    "High" FLOAT   NOT NULL,
+    "Low" FLOAT   NOT NULL,
+    "Close" FLOAT   NOT NULL,
+    "Daily_Change" FLOAT   NOT NULL
+);
+
+CREATE TABLE "Web_Scraping_Data_Table" (
+    "Date" date   NOT NULL,
+    "Symbol" VARCHAR(30)   NOT NULL,
+    "Closing_Price" FLOAT   NOT NULL
+);
