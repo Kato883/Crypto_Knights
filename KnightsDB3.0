@@ -1,4 +1,7 @@
 SELECT * FROM "Stock_History";
+DROP TABLE "Crypto";
+SELECT * FROM "Web_Scraping_Data_Table";
+SELECT * FROM "Crypto";
 
 CREATE TABLE "Crypto" (
     "Date" date   NOT NULL,
@@ -8,10 +11,8 @@ CREATE TABLE "Crypto" (
     "Low" FLOAT   NOT NULL,
     "Close" FLOAT   NOT NULL,
     "Close_Increase" FLOAT   NOT NULL,
-    "Volume" INT   NOT NULL,
-    "Volume_Increase" FLOAT   NOT NULL,
-    "Market_Cap" INT   NOT NULL,
-    "Market_Cap_Increase" FLOAT   NOT NULL
+    "Volume" BIGINT   NOT NULL,
+    "Market_Cap" BIGINT   NOT NULL
 );
 
 CREATE TABLE "Stock_History" (
