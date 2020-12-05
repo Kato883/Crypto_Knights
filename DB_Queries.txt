@@ -1,0 +1,65 @@
+
+--Get all data from the 'Crypto' table where the volume of any row is greater than or equal to 1 million.
+SELECT *
+FROM CRYPTO
+   WHERE Volume >= 1000000
+   ORDER BY Volume ASC;
+
+
+--Get all data from the 'Stock_History' table that occured in 2016.
+SELECT *
+FROM Stock_History
+   WHERE DATE_PART('YEAR', Date) = 2016
+   ORDER BY Date ASC;
+
+
+--Get all data from the 'Web_Scraping_Data_Table', that is listed for the previous days date.
+SELECT *
+FROM Web_Scraping_Data_Table
+   WHERE Date = current_date - integer '1';
+
+
+--Get the date, symbol & close of every row in the 'Stock_History' & 'Crypto' tables.
+SELECT sh.Date
+      ,sh.Symbol
+      ,sh.Close
+FROM Stock_History AS sh
+UNION
+SELECT cry.Date
+      ,cry.Symbol
+      ,cry.Close Crypto AS cry
+
+
+--Get the date, symbol & close of every row in the 'Stock_History' & Web_Scraping_Data_Table tables that is for the Apple stock.
+SELECT * FROM(
+   SELECT sh.Date
+         ,sh.Symbol
+         ,sh.Close
+   FROM Stock_History AS sh
+   UNION
+   SELECT ws.Date
+         ,ws.Symbol
+         ,ws.Closing_Price
+   FROM Web_Scraping_Data_Table AS ws
+) AS table
+   WHERE sh.Symbol = 'AAPL'
+      AND ws.Symbol = 'AAPL';
+
+
+--Get the date, symbol & close of every row in every table.
+SELECT sh.Date
+      ,sh.Symbol
+      ,sh.Close
+FROM Stock_History AS sh
+UNION
+SELECT ws.Date
+      ,ws.Symbol
+      ,ws.Close
+FROM Web_Scraping_Data_Table AS ws
+UNION
+SELECT cry.Date
+      ,cry.Symbol
+      ,cry.Close
+FROM Web_Scraping_Data_Table AS cry
+
+
