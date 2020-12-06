@@ -26,14 +26,9 @@ Example Coin Lists: [BTC, ETH, LTC-USD, XRP-USD, DASH-USD]
 
 
 ## Python Library Dependencies
-BeautifulSoup
-
-requests
-
-pandas 
-
-datetime
-
-sqlalchemy
-
+* BeautifulSoup
+* requests
+* pandas 
+* datetime
+* sqlalchemy
 key from scrapingdog (https://www.scrapingdog.com/) Free key for first 1000 queries
