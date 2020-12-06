@@ -1,6 +1,13 @@
 # Crypto_Knights
 Group Project for Group 9 Crypto Knights
 
+## Background
+Both organizations and individuals can use market data to guide financial decision-making, but that data must be compiled before it can be analyzed. The preparation of such data sources requires the Extract-Transform-Load process. This project demonstrates competency in these processes.
+
+The group extracted market data by three methods: downloading CSVs, querying JSONs by API call, and scraping Yahoo finance. Then, using python's pandas library, the group transformed the data to eliminate unneeded data and put it in the necessary formats. Last, the group loaded the data into a postgresql database for future analysis.
+
+The group compiled data from five stock tickers and five cryptocurrencies to demonstrate the proof of concept, but this method could be scaled up for wider use.
+
 Example Stock Lists: [AMD, AAPL, GOOGL, TSLA, GME]
 Example Coin Lists: [BTC, ETH, LTC-USD, XRP-USD, DASH-USD]
 
@@ -18,9 +25,10 @@ Example Coin Lists: [BTC, ETH, LTC-USD, XRP-USD, DASH-USD]
 * Before loading our data, we used an ERD to create and format the tables we wanted to utilize with the information we were extracting. We then determined that Postgres database management system would be the best way to load our data into a DB. After retrieving the API calls, web scraping and importing data into CSV's, it was imperitive that we had uniform columns that correlate with the database that had been created. Using Python, we transfered all of the data necessary into the Postgres DB.  We are now able to train model with the Crypto and Stock History table then test the model using the Web Scraping Table.
 
 
-# Python Library Dependencies
+## Python Library Dependencies
 BeautifulSoup
 requests
 pandas 
 datetime
+sqlalchemy
 key from scrapingdog (https://www.scrapingdog.com/) Free key for first 1000 queries
